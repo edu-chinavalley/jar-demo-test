@@ -5,3 +5,4 @@
 2、Preconditions 数值判断   
 3、Optional  null判断  
 4、Ordering 自定义排序器  
+5、Range 区间

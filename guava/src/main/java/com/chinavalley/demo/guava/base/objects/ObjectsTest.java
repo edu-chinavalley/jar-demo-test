@@ -1,4 +1,4 @@
-package com.chinavalley.demo.guava.objects;
+package com.chinavalley.demo.guava.base.objects;
 
 
 import com.google.common.base.Objects;

@@ -1,4 +1,4 @@
-package com.chinavalley.demo.guava.preconditions;
+package com.chinavalley.demo.guava.base.preconditions;
 
 import com.google.common.base.Preconditions;
 

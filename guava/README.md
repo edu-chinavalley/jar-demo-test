@@ -9,4 +9,5 @@
 
 
 #### 集合
-1、
+1、不可变集合 Immutable  
+2、多重集合 Multiset  

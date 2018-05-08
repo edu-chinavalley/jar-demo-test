@@ -1,4 +1,4 @@
-package com.chinavalley.demo.guava.ordering;
+package com.chinavalley.demo.guava.base.ordering;
 
 import lombok.Data;
 

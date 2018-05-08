@@ -1,4 +1,4 @@
-package com.chinavalley.demo.guava.range;
+package com.chinavalley.demo.guava.base.range;
 
 import com.google.common.collect.BoundType;
 import com.google.common.collect.Range;

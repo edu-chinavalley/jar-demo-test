@@ -1,9 +1,8 @@
-package com.chinavalley.demo.guava.optional;
+package com.chinavalley.demo.guava.base.optional;
 
 
 import com.google.common.base.Optional;
 
-import java.util.ArrayList;
 import java.util.Set;
 
 /**

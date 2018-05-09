@@ -10,4 +10,7 @@
 
 #### 集合
 1、不可变集合 Immutable  
-2、多重集合 Multiset  
+2、多重集合之 Multiset  
+3、多重集合之 MultiMap  
+4、双向map BiMap  
+5、多重集合之 SortedMultiset  

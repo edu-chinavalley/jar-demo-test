@@ -10,7 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>guava</module>
-      <module>common-csv</module>
+    <module>common-csv</module>
   </modules>
 
   <name>jar-demo-test</name>

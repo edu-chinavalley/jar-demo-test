@@ -5,4 +5,6 @@
 
 ### jar包列表 
 1、Google Guava 增强Java功能的类库  
-2、Apache commons-csv csv操作增强库
+2、Apache common-csv csv操作增强库  
+3、Apache common-Configuration2   配置文件导入  
+4、Apache common-BeanUtils Java Bean的工具包

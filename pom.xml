@@ -11,6 +11,8 @@
   <modules>
     <module>guava</module>
     <module>common-csv</module>
+      <module>common-configuration</module>
+      <module>common-beanutils</module>
   </modules>
 
   <name>jar-demo-test</name>

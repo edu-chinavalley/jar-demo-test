@@ -13,6 +13,7 @@
     <module>common-csv</module>
       <module>common-configuration</module>
       <module>common-beanutils</module>
+      <module>common-codec</module>
   </modules>
 
   <name>jar-demo-test</name>

@@ -14,6 +14,8 @@
       <module>common-configuration</module>
       <module>common-beanutils</module>
       <module>common-codec</module>
+      <module>common-compress</module>
+      <module>common-io</module>
   </modules>
 
   <name>jar-demo-test</name>

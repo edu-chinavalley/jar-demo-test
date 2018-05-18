@@ -10,12 +10,23 @@ import java.io.OutputStream;
 
 public class SevenZTest {
     public static void main(String ...args) throws IOException {
+        SevenZTest st = new SevenZTest();
 
+        //st.compress("");
+
+    }
+
+    // TODO: 2018/5/17 补充7Z解压缩方法 添加方法
+
+
+
+
+    public void compress(String file){
         // 解压7z文件 方式1
         String outputDir = "";
         int bufferEdSize = 8092;
         try{
-            SevenZFile sevenZFile = new SevenZFile(new File("archive.7z"));
+            SevenZFile sevenZFile = new SevenZFile(new File(file));
             SevenZArchiveEntry entry = null;
 
             while((entry = sevenZFile.getNextEntry()) != null){
@@ -46,6 +57,4 @@ public class SevenZTest {
             System.err.println(ex.toString());
         }
     }
-
-    // TODO: 2018/5/17 补充7Z解压缩方法 添加方法
 }

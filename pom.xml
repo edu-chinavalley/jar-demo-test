@@ -16,6 +16,7 @@
       <module>common-codec</module>
       <module>common-compress</module>
       <module>common-io</module>
+      <module>common-digester3</module>
   </modules>
 
   <name>jar-demo-test</name>

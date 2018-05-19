@@ -1,5 +1,9 @@
 package com.chinavalley.demo.commondigester3;
 
+import org.apache.commons.digester3.Digester;
+
+import java.util.Iterator;
+
 /**
  * @author: polfdark
  */
@@ -9,34 +13,34 @@ public class DigesterTest {
         // 建立一个Digester对象
         Digester digester = new Digester();
         // 从reader标签开始解析,并新建一个Reader对象做为根对象
-        digester.addObjectCreate( " reader " ,Reader. class );
+        digester.addObjectCreate( "reader" ,Reader. class );
         // 根据reader标签属性值配置对象的属性,此类的属性必须具有setter
-        digester.addSetProperties( " reader " );
+        digester.addSetProperties( "reader" );
 
         // -----第1层元素开始
-        digester.addObjectCreate( " reader/book " ,Book. class );
+        digester.addObjectCreate( "reader/book" ,Book. class );
         // digester.addSetProperties("reader/book");
         // 可以用以下三条语句代替
-        digester.addCallMethod( " reader/book " , " setInfo " , 2 );
-        digester.addCallParam( " reader/book " , 0 , " title " );
-        digester.addCallParam( " reader/book " , 1 , " author " );
+        digester.addCallMethod( "reader/book" , "setInfo" , 2 );
+        digester.addCallParam( "reader/book" , 0 , "title" );
+        digester.addCallParam( "reader/book" , 1 , "author" );
 
         // -----第2层元素开始
-        digester.addObjectCreate( " reader/book/chapter " ,Chapter. class );
-        digester.addBeanPropertySetter( " reader/book/chapter/no " );
+        digester.addObjectCreate( "reader/book/chapter" ,Chapter.class );
+        digester.addBeanPropertySetter( "reader/book/chapter/no" );
         // digester.addBeanPropertySetter("reader/book/chapter/caption");
         // 同样可以替代
-        digester.addCallMethod( " reader/book/chapter/caption " , " setCaption " , 0 );
+        digester.addCallMethod( "reader/book/chapter/caption" , "setCaption" , 0 );
 
-        digester.addSetNext( " reader/book/chapter " , " addReadedChapter " );
+        digester.addSetNext( "reader/book/chapter" , "addReadedChapter" );
         // -----第2层元素结束
 
-        digester.addSetNext( " reader/book " , " addBook " );
+        digester.addSetNext( "reader/book" , "addBook" );
         // -----第1层元素结束
 
         try {
             // 解析XML文件,并得到ROOT元素
-            Reader reader  =  (Reader)digester.parse( TestCase. class .getClassLoader().getResourceAsStream( " readbook.xml " ));
+            Reader reader  =  (Reader)digester.parse( DigesterTest.class.getClassLoader().getResourceAsStream( "example.xml" ));
             // 可以使用的替代方法1
             // reader = (Reader)digester.getRoot();
             // 可以使用的方法2

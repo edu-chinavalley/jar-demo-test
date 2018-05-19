@@ -17,6 +17,8 @@
       <module>common-compress</module>
       <module>common-io</module>
       <module>common-digester3</module>
+      <module>common-rng</module>
+      <module>protostuff</module>
   </modules>
 
   <name>jar-demo-test</name>

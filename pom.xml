@@ -19,6 +19,9 @@
       <module>common-digester3</module>
       <module>common-rng</module>
       <module>protostuff</module>
+    <module>zookeeper-zkclient</module>
+    <module>zookeeper-curator</module>
+    <module>zookeeper-zookeeper</module>
   </modules>
 
   <name>jar-demo-test</name>

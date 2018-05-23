@@ -22,6 +22,9 @@
     <module>zookeeper-zkclient</module>
     <module>zookeeper-curator</module>
     <module>zookeeper-zookeeper</module>
+      <module>zookeeper-curator-distributedlock</module>
+    <module>zookeeper-curator-discovery</module>
+      <module>jdk</module>
   </modules>
 
   <name>jar-demo-test</name>

@@ -1,4 +1,4 @@
-package com.chinavalley.demo.curator;
+package com.chinavalley.demo.curator.connect;
 
 public class ConnectTest {
 

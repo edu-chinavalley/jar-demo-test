@@ -14,3 +14,6 @@
 3、多重集合之 MultiMap  
 4、双向map BiMap  
 5、多重集合之 SortedMultiset  
+
+#### 缓存
+1、Cache 本地缓存

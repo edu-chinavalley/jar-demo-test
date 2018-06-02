@@ -7,7 +7,7 @@ public class PreconditionsTest {
     public static void main(String ...args){
 
         //判断条件是否满足 不满足报IllegalArgumentException
-        Preconditions.checkArgument(19 < 20, "%s 不小于 %s", 21,290);
+        Preconditions.checkArgument(33 < 20, "%s 不小于 %s", 21,123);
         Preconditions.checkArgument(true);
 
         //判断参数是否为null

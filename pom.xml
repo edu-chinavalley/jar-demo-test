@@ -25,6 +25,7 @@
       <module>zookeeper-curator-distributedlock</module>
     <module>zookeeper-curator-discovery</module>
       <module>jdk</module>
+      <module>log-back</module>
   </modules>
 
   <name>jar-demo-test</name>

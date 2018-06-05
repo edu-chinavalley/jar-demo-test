@@ -26,6 +26,7 @@
     <module>zookeeper-curator-discovery</module>
       <module>jdk</module>
       <module>log-back</module>
+    <module>redis-jedis</module>
   </modules>
 
   <name>jar-demo-test</name>

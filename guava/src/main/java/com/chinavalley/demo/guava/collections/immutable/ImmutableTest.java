@@ -74,9 +74,11 @@ public class ImmutableTest {
 
         //建造者模式生成
         ImmutableList<String> fruit = ImmutableList.<String>builder().add("apple","banana","peach","lemon","pear").build();
+        System.out.println("ImmutableList:"+ fruit);
 
         //of生成
         ImmutableList<String> imOflist=ImmutableList.of("peida","jerry","harry");
+        System.out.println("ImmutableList:"+ imOflist);
 
         //as 视图
         ImmutableSortedMap map = ImmutableSortedMap.of("a","b","1","c","0","4");

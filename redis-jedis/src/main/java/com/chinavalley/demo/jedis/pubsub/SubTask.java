@@ -17,12 +17,12 @@ public class SubTask extends JedisPubSub implements Runnable {
 
     @Override
     public void run() {
-        JedisPool jedisPool = new JedisPool("192.168.1.104",6379);
+        JedisPool jedisPool = new JedisPool("192.168.1.102",6379);
         Jedis jedis = jedisPool.getResource();
         SubTask subTask = new SubTask();
         Thread thread = new Thread(new SubTaskListen(subTask));
         thread.start();
-        jedis.subscribe(subTask,"channel");
+        jedis.subscribe(subTask,"channel","war");
 
     }
     /**

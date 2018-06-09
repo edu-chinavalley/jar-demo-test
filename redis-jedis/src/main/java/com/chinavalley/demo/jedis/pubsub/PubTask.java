@@ -11,11 +11,12 @@ public class PubTask implements Runnable {
     }
     @Override
     public void run() {
-        JedisPool js = new JedisPool("192.168.1.104",6379);
+        JedisPool js = new JedisPool("192.168.1.102",6379);
         Jedis jedis = js.getResource();
 
         while(true) {
             jedis.publish("channel", "helklo");
+            jedis.publish("war", "123");
             try {
                 Thread.sleep(3000L);
             } catch (InterruptedException e) {

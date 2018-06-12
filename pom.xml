@@ -28,6 +28,8 @@
       <module>log-back</module>
     <module>redis-jedis</module>
       <module>thread</module>
+      <module>activemq</module>
+      <module>sharding-jdbc</module>
   </modules>
 
   <name>jar-demo-test</name>

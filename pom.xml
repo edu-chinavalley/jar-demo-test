@@ -30,6 +30,7 @@
       <module>thread</module>
       <module>activemq</module>
       <module>sharding-jdbc</module>
+    <module>druid</module>
   </modules>
 
   <name>jar-demo-test</name>

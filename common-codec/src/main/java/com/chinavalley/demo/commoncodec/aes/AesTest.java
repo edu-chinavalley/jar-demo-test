@@ -11,10 +11,10 @@ import java.security.PublicKey;
 public class AesTest {
 
     public static void main(String ...args) throws UnsupportedEncodingException {
-//        byte[] aesKey = AesKit.getRawKey(System.currentTimeMillis(),128);
-//        System.out.println(new String(aesKey,"utf-8"));
-//        String key = HexKit.bytesToHexStr(aesKey);
-//        System.out.println(key);
+        byte[] aesKey = AesKit.getRawKey(System.currentTimeMillis(),128);
+        System.out.println(new String(aesKey,"utf-8"));
+        String key = HexKit.bytesToHexStr(aesKey);
+        System.out.println(key);
         String clearText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
 //        System.out.println(HexKit.bytesToHexStr(AesKit.encrypt(clearText.getBytes("utf-8"),HexKit.hexStrToBytes(key))));
         KeyPair kp = RsaKit.generateRSAKeyPair();

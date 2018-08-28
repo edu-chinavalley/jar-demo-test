@@ -22,7 +22,7 @@
     <module>zookeeper-zkclient</module>
     <module>zookeeper-curator</module>
     <module>zookeeper-zookeeper</module>
-      <module>zookeeper-curator-distributedlock</module>
+      <module>zookeeper-curator-distributedLock</module>
     <module>zookeeper-curator-discovery</module>
       <module>jdk</module>
       <module>log-back</module>
@@ -31,6 +31,7 @@
       <module>activemq</module>
       <module>sharding-jdbc</module>
     <module>druid</module>
+    <module>hikaricp</module>
   </modules>
 
   <name>jar-demo-test</name>
@@ -49,7 +50,6 @@
       <version>1.16.20</version>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

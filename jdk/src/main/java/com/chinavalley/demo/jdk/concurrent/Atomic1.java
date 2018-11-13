@@ -15,8 +15,8 @@ public class Atomic1 {
     private static AtomicInteger atomicInt = new AtomicInteger(0);
 
     public static void main(String[] args) {
-        //testIncrement();
-        //testAccumulate();
+        testIncrement();
+        testAccumulate();
         testUpdate();
     }
 
@@ -42,10 +42,12 @@ public class Atomic1 {
 
         ExecutorService executor = Executors.newFixedThreadPool(2);
 
-        IntStream.range(0, NUM_INCREMENTS)
+        IntStream.range(0, 2)
                 .forEach(i -> {
                     Runnable task = () ->
-                            atomicInt.accumulateAndGet(i, (n, m) -> n + m);
+                            atomicInt.accumulateAndGet(i, (n, m)
+                                    ->
+                                    n + m);
                     executor.submit(task);
                 });
 

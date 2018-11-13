@@ -1,6 +1,7 @@
 package com.chinavalley.demo.jdk.nashorn;
 
-import com.winterbe.java8.samples.lambda.Person;
+
+import com.chinavalley.demo.jdk.lambda.Person;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;

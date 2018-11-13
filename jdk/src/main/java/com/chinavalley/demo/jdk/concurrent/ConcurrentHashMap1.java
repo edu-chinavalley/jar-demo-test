@@ -11,9 +11,9 @@ public class ConcurrentHashMap1 {
     public static void main(String[] args) {
         System.out.println("Parallelism: " + ForkJoinPool.getCommonPoolParallelism());
 
-        testForEach();
+        //testForEach();
         testSearch();
-        testReduce();
+        //testReduce();
     }
 
     private static void testReduce() {
@@ -63,10 +63,10 @@ public class ConcurrentHashMap1 {
 
     private static void testForEach() {
         ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
-        map.putIfAbsent("foo", "bar");
-        map.putIfAbsent("han", "solo");
-        map.putIfAbsent("r2", "d2");
-        map.putIfAbsent("c3", "p0");
+        System.out.println(map.putIfAbsent("foo", "bar"));
+        System.out.println(map.putIfAbsent("han", "solo"));
+        System.out.println(map.putIfAbsent("r2", "d2"));
+        System.out.println(map.putIfAbsent("foo", "p0"));
 
         map.forEach(1, (key, value) -> System.out.printf("key: %s; value: %s; thread: %s\n", key, value, Thread.currentThread().getName()));
 //        map.forEach(5, (key, value) -> System.out.printf("key: %s; value: %s; thread: %s\n", key, value, Thread.currentThread().getName()));

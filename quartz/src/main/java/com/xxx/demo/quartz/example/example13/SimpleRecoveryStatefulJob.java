@@ -15,22 +15,23 @@
  * 
  */
  
-package com.xxx.demo.quartz.simpletrigger;
+package com.xxx.demo.quartz.example.example13;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.JobKey;
-import java.util.Date;
+import org.quartz.DisallowConcurrentExecution;
+import org.quartz.PersistJobDataAfterExecution;
 
-public class SimpleJob implements Job {
+/**
+ * This job has the same functionality of SimpleRecoveryJob except that this job implements is 'stateful', in that it
+ * will have it's data (JobDataMap) automatically re-persisted after each execution, and only one instance of the
+ * JobDetail can be executed at a time.
+ * 
+ * @author Bill Kratzer
+ */
+@PersistJobDataAfterExecution
+@DisallowConcurrentExecution
+public class SimpleRecoveryStatefulJob extends SimpleRecoveryJob {
 
-    public SimpleJob() {
-    }
-
-    public void execute(JobExecutionContext context)
-        throws JobExecutionException {
-        JobKey jobKey = context.getJobDetail().getKey();
-        System.out.println("SimpleJob says: " + jobKey + " executing at " + new Date());
-    }
+  public SimpleRecoveryStatefulJob() {
+    super();
+  }
 }

@@ -15,11 +15,12 @@
  * 
  */
  
-package com.xxx.demo.quartz.simplejob1;
+package com.xxx.demo.quartz.example.example3;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+import org.quartz.JobKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,21 +28,39 @@ import java.util.Date;
 
 /**
  * <p>
- * 简单示例
+ * This is just a simple job that gets fired off many times by example 1
  * </p>
  * 
  * @author Bill Kratzer
  */
-public class HelloJob implements Job {
+public class SimpleJob implements Job {
 
+    private static Logger _log = LoggerFactory.getLogger(SimpleJob.class);
 
-    public HelloJob() {
+    /**
+     * Quartz requires a public empty constructor so that the
+     * scheduler can instantiate the class whenever it needs.
+     */
+    public SimpleJob() {
     }
 
+    /**
+     * <p>
+     * Called by the <code>{@link org.quartz.Scheduler}</code> when a
+     * <code>{@link org.quartz.Trigger}</code> fires that is associated with
+     * the <code>Job</code>.
+     * </p>
+     * 
+     * @throws JobExecutionException
+     *             if there is an exception while executing the job.
+     */
     public void execute(JobExecutionContext context)
         throws JobExecutionException {
 
-        System.out.printf("Hello world"+ new Date());
+        // This job simply prints out its job name and the
+        // date and time that it is running
+        JobKey jobKey = context.getJobDetail().getKey();
+        _log.info("SimpleJob says: " + jobKey + " executing at " + new Date());
     }
 
 }

@@ -27,8 +27,14 @@
       <module>jdk</module>
       <module>log-back</module>
     <module>redis-jedis</module>
+      <module>thread</module>
       <module>activemq</module>
       <module>sharding-jdbc</module>
+    <module>druid</module>
+    <module>hikaricp</module>
+      <module>metrics</module>
+      <module>shiro</module>
+      <module>quartz</module>
   </modules>
 
   <name>jar-demo-test</name>
